@@ -1,0 +1,59 @@
+{
+  "name": "review-shipment-document-completeness-checker",
+  "description": "Run Shipment Document Completeness Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "shipment_id": {
+            "type": "string",
+            "description": "shipment id"
+          },
+          "shipment_documents": {
+            "type": "array",
+            "description": "shipment documents"
+          },
+          "consignee": {
+            "type": "string",
+            "description": "consignee"
+          },
+          "carrier_handoff": {
+            "type": "string",
+            "description": "carrier handoff"
+          }
+        },
+        "required": [
+          "shipment_id",
+          "shipment_documents",
+          "consignee",
+          "carrier_handoff"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-shipment-document-completeness-checker.py",
+    "runtime": "python3"
+  }
+}

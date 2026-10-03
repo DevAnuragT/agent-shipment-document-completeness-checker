@@ -1,0 +1,8 @@
+{
+  "shipment_id": "evidence-record",
+  "shipment_documents": [
+    "record-1"
+  ],
+  "consignee": "evidence-record",
+  "carrier_handoff": "evidence-record"
+}

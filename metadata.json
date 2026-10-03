@@ -1,0 +1,29 @@
+{
+  "slug": "shipment-document-completeness-checker",
+  "title": "Shipment Document Completeness Checker",
+  "category": "supply-chain",
+  "description": "Review shipments for required documents, consignee details, and carrier handoff.",
+  "fields": {
+    "shipment_id": {
+      "label": "shipment id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "shipment_documents": {
+      "label": "shipment documents",
+      "kind": "list",
+      "minimum": 1
+    },
+    "consignee": {
+      "label": "consignee",
+      "kind": "required",
+      "minimum": 0
+    },
+    "carrier_handoff": {
+      "label": "carrier handoff",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: shipment-document-completeness-checker
+version: 0.1.0
+description: Review shipments for required documents, consignee details, and carrier handoff.
+skills:
+  - shipment-document-completeness-checker-skill
+tools:
+  - review-shipment-document-completeness-checker
+tags:
+  - supply-chain
+  - evidence-driven
